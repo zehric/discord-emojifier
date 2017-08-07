@@ -15,6 +15,38 @@ public class Emojify {
     private static String[][] full;
     private static int[][] current;
     
+    private static final int[][] EXC = {{1}, {1}, {1}, {0}, {1}};
+    private static final int[][] QUO = {{1, 1}, {1, 1}, {0, 0}, {0, 0}, {0, 0}};
+    private static final int[][] POU = {{0, 1, 0, 1}, {1, 1, 1, 1}, {0, 1, 0, 1}, {1, 1, 1, 1}, {0, 1, 0, 1}};
+    private static final int[][] DOL = {{0, 1, 0}, {1, 1, 1}, {0, 1, 0}, {1, 1, 1}, {0, 1, 0}};
+    private static final int[][] PER = {{1, 0, 1}, {0, 0, 1}, {0, 1, 0}, {1, 0, 0}, {1, 0, 1}};
+    private static final int[][] AMP = {{0, 1, 1, 0}, {1, 0, 1, 0}, {0, 1, 0, 1}, {1, 0, 1, 0}, {1, 1, 0, 1}};
+    private static final int[][] APO = {{1}, {1}, {0}, {0}, {0}};
+    private static final int[][] OPP = {{0, 1}, {1, 0}, {1, 0}, {1, 0}, {0, 1}};
+    private static final int[][] CLP = {{1, 0}, {0, 1}, {0, 1}, {0, 1}, {1, 0}};
+    private static final int[][] AST = {{1, 0, 1}, {0, 1, 0}, {1, 0, 1}, {0, 0, 0}, {0, 0, 0}};
+    private static final int[][] PLU = {{0, 0, 0}, {0, 1, 0}, {1, 1, 1}, {0, 1, 0}, {0, 0, 0}};
+    private static final int[][] COM = {{0, 0}, {0, 0}, {0, 1}, {0, 1}, {1, 0}};
+    private static final int[][] MIN = {{0, 0, 0}, {0, 0, 0}, {1, 1, 1}, {0, 0, 0}, {0, 0, 0}};
+    private static final int[][] PER = {{0}, {0}, {0}, {0}, {1}};
+    private static final int[][] FSL = {{0, 0, 1}, {0, 0, 1}, {0, 1, 0}, {1, 0, 0}, {1, 0, 0}};
+    private static final int[][] N0 = {{1, 1, 1}, {1, 0, 1}, {1, 0, 1}, {1, 0, 1}, {1, 1, 1}};
+    private static final int[][] N1 = {{0, 1}, {1, 1}, {0, 1}, {0, 1}, {0, 1}};
+    private static final int[][] N2 = {{1, 1, 1}, {0, 0, 1}, {1, 1, 1}, {1, 0, 0}, {1, 1, 1}};
+    private static final int[][] N3 = {{1, 1, 1}, {0, 0, 1}, {1, 1, 1}, {0, 0, 1}, {1, 1, 1}};
+    private static final int[][] N4 = {{1, 0, 1}, {1, 0, 1}, {1, 1, 1}, {0, 0, 1}, {0, 0, 1}};
+    private static final int[][] N5 = {{1, 1, 1}, {1, 0, 0}, {1, 1, 1}, {0, 0, 1}, {1, 1, 1}};
+    private static final int[][] N6 = {{1, 1, 1}, {1, 0, 0}, {1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
+    private static final int[][] N7 = {{1, 1, 1}, {0, 0, 1}, {0, 0, 1}, {0, 0, 1}, {0, 0, 1}};
+    private static final int[][] N8 = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}, {1, 0, 1}, {1, 0, 1}};
+    private static final int[][] N9 = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}, {0, 0, 1}, {0, 0, 1}};
+    private static final int[][] COL = {{0}, {1}, {0}, {1}, {0}};
+    private static final int[][] SEM = {{0, 0}, {0, 1}, {0, 0}, {0, 1}, {1, 0}};
+    private static final int[][] LES = {{0, 0, 1}, {0, 1, 0}, {1, 0, 0}, {0, 1, 0}, {0, 0, 1}};
+    private static final int[][] EQU = {{0, 0, 0}, {1, 1, 1}, {0, 0, 0}, {1, 1, 1}, {0, 0, 0}};
+    private static final int[][] GRE = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {0, 1, 0}, {1, 0, 0}};
+    private static final int[][] QUE = {{0, 1, 0}, {1, 0, 1}, {0, 1, 1}, {0, 0, 0}, {0, 1, 0}};
+    private static final int[][] AT = {{0, 1, 1}, {1, 0, 1}, {1, 0, 1}, {1, 0, 0}, {0, 1, 1}};
     private static final int[][] A = {{0, 1, 0}, {1, 0, 1}, {1, 1, 1}, {1, 0, 1}, {1, 0, 1}};
     private static final int[][] B = {{1, 1, 0}, {1, 0, 1}, {1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
     private static final int[][] C = {{0, 1, 1}, {1, 0, 0}, {1, 0, 0}, {1, 0, 0}, {0, 1, 1}};
@@ -41,7 +73,13 @@ public class Emojify {
     private static final int[][] X = {{1, 0, 1}, {1, 0, 1}, {0, 1, 0}, {1, 0, 1}, {1, 0, 1}};
     private static final int[][] Y = {{1, 0, 1}, {1, 0, 1}, {0, 1, 1}, {0, 0, 1}, {1, 1, 0}};
     private static final int[][] Z = {{1, 1, 1}, {0, 0, 1}, {0, 1, 0}, {1, 0, 0}, {1, 1, 1}};
-    private static final int[][][] ABC = {A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z};
+    private static final int[][] OPB = {{1, 1}, {1, 0}, {1, 0}, {1, 0}, {1, 1}};
+    private static final int[][] BSL = {{1, 0, 0}, {1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {0, 0, 1}};
+    private static final int[][] CLB = {{1, 1}, {0, 1}, {0, 1}, {0, 1}, {1, 1}};
+    private static final int[][] CAR = {{0, 1, 0}, {1, 0, 1}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
+    private static final int[][] UND = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {1, 1, 1}};
+    private static final int[][] GRA = {{1, 0, 0}, {0, 1, 0}, {0, 1, 0}, {0, 0, 0}, {0, 0, 0}};
+    private static final int[][][] ABC = {EXC, QUO, POU, DOL, PER, AMP, APO, OPP, CLP, AST, PLU, COM, MIN, PER, FSL, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9, COL, SEM, LES, EQU, GRE, QUE, AT, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, OPB, BSL, CLB, CAR, UND, GRA};
     
     public Emojify(String text, String textEmoji, String backEmoji, String borderEmoji) {
       this.text = text.toUpperCase();
