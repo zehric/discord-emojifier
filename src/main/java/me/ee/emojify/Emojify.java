@@ -1,3 +1,5 @@
+package me.ee.emojify;
+
 /*
  * the discord emojifier
  * limit of 200 emojis per message, the rest will be cut off, copy and paste the output into discord chat
