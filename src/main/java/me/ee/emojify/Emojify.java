@@ -16,7 +16,7 @@ public class Emojify {
     private static int[][] current;
     
     private static final int[][] EXC = {{1}, {1}, {1}, {0}, {1}};
-    private static final int[][] QUO = {{1, 1}, {1, 1}, {0, 0}, {0, 0}, {0, 0}};
+    private static final int[][] QUO = {{1, 0, 1}, {1, 0, 1}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
     private static final int[][] POU = {{0, 1, 0, 1}, {1, 1, 1, 1}, {0, 1, 0, 1}, {1, 1, 1, 1}, {0, 1, 0, 1}};
     private static final int[][] DOL = {{0, 1, 0}, {1, 1, 1}, {0, 1, 0}, {1, 1, 1}, {0, 1, 0}};
     private static final int[][] PER = {{1, 0, 1}, {0, 0, 1}, {0, 1, 0}, {1, 0, 0}, {1, 0, 1}};
