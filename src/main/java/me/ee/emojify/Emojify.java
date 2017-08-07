@@ -101,7 +101,7 @@ public class Emojify {
 
         for (int i = 0; i < text.length(); i++)
         {
-            length += ABC[text.charAt(i) - 65][1].length;
+            length += ABC[text.charAt(i) - 33][1].length;
         }
         length += text.length() + 3;
 
