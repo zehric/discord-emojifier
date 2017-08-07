@@ -142,7 +142,7 @@ public class Emojify {
 
         for (int i = 0; i < text.length(); i++)
         {
-            chars[i] = ABC[text.charAt(i) - 65];
+            chars[i] = ABC[text.charAt(i) - 33];
             if (i == 0)     starts[i] = 2;
             else            starts[i] = starts[i - 1] + chars[i - 1][1].length + 1;
         }
