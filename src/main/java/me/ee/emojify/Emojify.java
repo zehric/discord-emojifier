@@ -1,5 +1,3 @@
-package me.ee.emojify;
-
 /*
  * the discord emojifier
  * limit of 200 emojis per message, the rest will be cut off, copy and paste the output into discord chat
@@ -7,7 +5,7 @@ package me.ee.emojify;
  * - ethan zheng 2017
  */
 
-public class Emojify {
+public class asdf {
     private String text;
     private String textEmoji;
     private String backEmoji;
@@ -28,7 +26,7 @@ public class Emojify {
     private static final int[][] PLU = {{0, 0, 0}, {0, 1, 0}, {1, 1, 1}, {0, 1, 0}, {0, 0, 0}};
     private static final int[][] COM = {{0, 0}, {0, 0}, {0, 1}, {0, 1}, {1, 0}};
     private static final int[][] MIN = {{0, 0, 0}, {0, 0, 0}, {1, 1, 1}, {0, 0, 0}, {0, 0, 0}};
-    private static final int[][] PER = {{0}, {0}, {0}, {0}, {1}};
+    private static final int[][] PRD = {{0}, {0}, {0}, {0}, {1}};
     private static final int[][] FSL = {{0, 0, 1}, {0, 0, 1}, {0, 1, 0}, {1, 0, 0}, {1, 0, 0}};
     private static final int[][] N0 = {{1, 1, 1}, {1, 0, 1}, {1, 0, 1}, {1, 0, 1}, {1, 1, 1}};
     private static final int[][] N1 = {{0, 1}, {1, 1}, {0, 1}, {0, 1}, {0, 1}};
@@ -79,9 +77,9 @@ public class Emojify {
     private static final int[][] CAR = {{0, 1, 0}, {1, 0, 1}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
     private static final int[][] UND = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {1, 1, 1}};
     private static final int[][] GRA = {{1, 0, 0}, {0, 1, 0}, {0, 1, 0}, {0, 0, 0}, {0, 0, 0}};
-    private static final int[][][] ABC = {EXC, QUO, POU, DOL, PER, AMP, APO, OPP, CLP, AST, PLU, COM, MIN, PER, FSL, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9, COL, SEM, LES, EQU, GRE, QUE, AT, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, OPB, BSL, CLB, CAR, UND, GRA};
+    private static final int[][][] ABC = {EXC, QUO, POU, DOL, PER, AMP, APO, OPP, CLP, AST, PLU, COM, MIN, PRD, FSL, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9, COL, SEM, LES, EQU, GRE, QUE, AT, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, OPB, BSL, CLB, CAR, UND, GRA};
     
-    public Emojify(String text, String textEmoji, String backEmoji, String borderEmoji) {
+    public asdf(String text, String textEmoji, String backEmoji, String borderEmoji) {
       this.text = text.toUpperCase();
       this.textEmoji = textEmoji;
       this.backEmoji = backEmoji;
@@ -132,7 +130,7 @@ public class Emojify {
                 if (c == length - 1) sb.append("\n");
             }
         }
-
+        
         return sb.toString();
     }
 
