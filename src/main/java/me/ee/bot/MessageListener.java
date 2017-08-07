@@ -16,7 +16,7 @@ public class MessageListener extends ListenerAdapter {
     String content = event.getMessage().getRawContent();
     if (!content.startsWith("!")) return;
     String[] args = content.split(" ");
-    if (args.length > 1 && args[0].toLowerCase().equals("!emojify")) {
+    if (args.length > 1 && args[0].toLowerCase().equals("!e")) {
       String text = args[1];
       String textEmoji = DEFAULT_TEXT_EMOJI;
       String backEmoji = DEFAULT_BACK_EMOJI;

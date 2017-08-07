@@ -7,7 +7,7 @@ package me.ee.emojify;
  * - ethan zheng 2017
  */
 
-public class asdf {
+public class Emojify {
     private String text;
     private String textEmoji;
     private String backEmoji;
@@ -81,7 +81,7 @@ public class asdf {
     private static final int[][] GRA = {{1, 0, 0}, {0, 1, 0}, {0, 1, 0}, {0, 0, 0}, {0, 0, 0}};
     private static final int[][][] ABC = {EXC, QUO, POU, DOL, PER, AMP, APO, OPP, CLP, AST, PLU, COM, MIN, PRD, FSL, N0, N1, N2, N3, N4, N5, N6, N7, N8, N9, COL, SEM, LES, EQU, GRE, QUE, AT, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, OPB, BSL, CLB, CAR, UND, GRA};
     
-    public asdf(String text, String textEmoji, String backEmoji, String borderEmoji) {
+    public Emojify(String text, String textEmoji, String backEmoji, String borderEmoji) {
       this.text = text.toUpperCase();
       this.textEmoji = textEmoji;
       this.backEmoji = backEmoji;
