@@ -14,8 +14,5 @@ public class Bot {
       throws LoginException, RateLimitedException, InterruptedException, IOException {
     JDA jda = new JDABuilder(AccountType.BOT).setToken(TOKEN).buildBlocking();
     jda.addEventListener(new MessageListener());
-
-    ServerSocket s = new ServerSocket(Integer.parseInt(System.getenv("PORT")));
-    System.out.println("Booted server.  " + Integer.parseInt(System.getenv("PORT")));
   }
 }
