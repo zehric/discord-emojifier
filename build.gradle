@@ -27,6 +27,17 @@ dependencies {
     compile "com.vdurmont:emoji-java:$emojiVersion"
 }
 
+task fatJar(type: Jar) {
+	manifest {
+        attributes 'Implementation-Title': 'Emojify Jar',
+        	'Implementation-Version': version,
+        	'Main-Class': 'me.ee.bot.Bot'
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
 task stage(dependsOn: ['build', 'clean'])
 build.mustRunAfter clean
 
