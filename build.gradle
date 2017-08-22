@@ -12,6 +12,7 @@ mainClassName = 'me.ee.bot.Bot'
 
 version '1.0'
 def jdaVersion = '3.2.0_241'
+def emojiVersion = '3.3.0'
 
 sourceCompatibility = 1.8
 
@@ -23,6 +24,7 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile "net.dv8tion:JDA:$jdaVersion"
+    compile "com.vdurmont:emoji-java:$emojiVersion"
 }
 
 task stage(dependsOn: ['build', 'clean'])

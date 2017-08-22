@@ -1,14 +1,17 @@
 package me.ee.bot;
 
+import com.vdurmont.emoji.Emoji;
+import com.vdurmont.emoji.EmojiManager;
+import java.util.Random;
 import me.ee.emojify.Emojify;
 import net.dv8tion.jda.core.entities.MessageChannel;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
 public class MessageListener extends ListenerAdapter {
-  private static final String DEFAULT_TEXT_EMOJI = ":bird:";
-  private static final String DEFAULT_BACK_EMOJI = ":dog:";
-  private static final String DEFAULT_BORDER_EMOJI = ":cat:";
+  private static final Emoji[] emojis = EmojiManager.getAll()
+      .toArray(new Emoji[EmojiManager.getAll().size()]);
+  private static final Random rng = new Random();
 
   @Override
   public void onMessageReceived(MessageReceivedEvent event) {
@@ -18,9 +21,9 @@ public class MessageListener extends ListenerAdapter {
     String[] args = content.split(" ");
     if (args.length > 1 && args[0].toLowerCase().equals("!e")) {
       String text = args[1];
-      String textEmoji = DEFAULT_TEXT_EMOJI;
-      String backEmoji = DEFAULT_BACK_EMOJI;
-      String borderEmoji = DEFAULT_BORDER_EMOJI;
+      String textEmoji = emojis[rng.nextInt(emojis.length)].getUnicode();
+      String backEmoji = emojis[rng.nextInt(emojis.length)].getUnicode();
+      String borderEmoji = emojis[rng.nextInt(emojis.length)].getUnicode();
       if (args.length > 2) {
         textEmoji = args[2];
       }
