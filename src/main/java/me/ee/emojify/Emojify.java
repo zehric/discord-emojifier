@@ -38,7 +38,7 @@ public class Emojify {
     private static final int[][] N5 = {{1, 1, 1}, {1, 0, 0}, {1, 1, 1}, {0, 0, 1}, {1, 1, 1}};
     private static final int[][] N6 = {{1, 1, 1}, {1, 0, 0}, {1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
     private static final int[][] N7 = {{1, 1, 1}, {0, 0, 1}, {0, 0, 1}, {0, 0, 1}, {0, 0, 1}};
-    private static final int[][] N8 = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}, {1, 0, 1}, {1, 0, 1}};
+    private static final int[][] N8 = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
     private static final int[][] N9 = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}, {0, 0, 1}, {0, 0, 1}};
     private static final int[][] COL = {{0}, {1}, {0}, {1}, {0}};
     private static final int[][] SEM = {{0, 0}, {0, 1}, {0, 0}, {0, 1}, {1, 0}};
