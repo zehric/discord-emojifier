@@ -48,7 +48,7 @@ public class Emojify {
     private static final int[][] QUE = {{0, 1, 0}, {1, 0, 1}, {0, 1, 1}, {0, 0, 0}, {0, 1, 0}};
     private static final int[][] AT = {{0, 1, 1}, {1, 0, 1}, {1, 0, 1}, {1, 0, 0}, {0, 1, 1}};
     private static final int[][] A = {{0, 1, 0}, {1, 0, 1}, {1, 1, 1}, {1, 0, 1}, {1, 0, 1}};
-    private static final int[][] B = {{1, 1, 0}, {1, 0, 1}, {1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
+    private static final int[][] B = {{1, 1, 0}, {1, 0, 1}, {1, 1, 0}, {1, 0, 1}, {1, 1, 1}};
     private static final int[][] C = {{0, 1, 1}, {1, 0, 0}, {1, 0, 0}, {1, 0, 0}, {0, 1, 1}};
     private static final int[][] D = {{1, 1, 0}, {1, 0, 1}, {1, 0, 1}, {1, 0, 1}, {1, 1, 0}};
     private static final int[][] E = {{1, 1, 1}, {1, 0, 0}, {1, 1, 0}, {1, 0, 0}, {1, 1, 1}};
