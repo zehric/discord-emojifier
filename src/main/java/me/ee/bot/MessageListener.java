@@ -39,9 +39,56 @@ public class MessageListener extends ListenerAdapter {
       MessageChannel channel = event.getChannel();
       channel.sendMessage(emojify.emojify()).queue();
     }
-    if (content.equals("!ping")) {
-      MessageChannel channel = event.getChannel();
-      channel.sendMessage(":dog:").queue();
+    if (args.length == 2 && args[0].toLowerCase().equals("!r")) {
+      String diceSize = args[1];
+      int n = 1;
+      if (args[1].contains("d")) {
+        String[] roll1 = args[1].split("d");
+        diceSize = roll1[1];
+        if (!roll1[0].equals("")) {
+          n = Integer.parseInt(roll1[0]);
+        }
+      }
+      int adder = 0;
+      if (diceSize.contains("+")) {
+        String[] roll2 = diceSize.split("\\+");
+        diceSize = roll2[0];
+        adder = Integer.parseInt(roll2[1]);
+      }
+      if (diceSize.contains("-")) {
+        String[] roll2 = diceSize.split("-");
+        diceSize = roll2[0];
+        adder = -Integer.parseInt(roll2[1]);
+      }
+      int size = Integer.parseInt(diceSize);
+      if (n > 0 && size > 0 && n < 100) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[ ");
+        int total = 0;
+        for (int i = 0; i < n; i++) {
+          int r = rng.nextInt(size) + 1;
+          total += r;
+          sb.append(r);
+          sb.append(' ');
+        }
+        sb.append(']');
+        if (adder > 0) {
+          sb.append(" + ");
+          sb.append(adder);
+          total += adder;
+        }
+        if (adder < 0) {
+          sb.append(" - ");
+          sb.append(-adder);
+          total += adder;
+        }
+        sb.append('\n');
+        sb.append("**");
+        sb.append(total);
+        sb.append("**");
+        MessageChannel channel = event.getChannel();
+        channel.sendMessage(sb.toString()).queue();
+      }
     }
   }
 }
